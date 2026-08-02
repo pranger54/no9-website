@@ -1,0 +1,7 @@
+Put Decharin photos in this folder.
+
+Name them in the order you want them shown:
+  01.jpg, 02.jpg, 03.jpg ...
+
+The first one (01.jpg) becomes the cover image on the /work page.
+The project appears on the site automatically once at least one .jpg is here.
