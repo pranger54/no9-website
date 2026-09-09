@@ -75,7 +75,7 @@ const Eyebrow = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(3.2rem, 6vw, 5.8rem);
   font-weight: 300;
   line-height: 1.07;
@@ -84,7 +84,7 @@ const Title = styled.h1`
   margin-bottom: 2rem;
 
   em {
-    font-style: italic;
+    font-style: normal;
     color: ${colors.gold};
   }
 

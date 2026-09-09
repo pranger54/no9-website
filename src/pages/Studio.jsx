@@ -14,8 +14,8 @@ export default function Studio() {
         title={<>Architecture as a <em>practice of listening</em></>}
       />
       <AboutSection />
-      <Testimonial />
-      <AwardsBar />
+      {/* <Testimonial /> */}
+      {/* <AwardsBar /> */}
       <CTA />
     </>
   );

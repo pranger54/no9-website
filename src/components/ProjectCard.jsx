@@ -74,7 +74,7 @@ const Category = styled.div`
 `;
 
 const Name = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.15rem;
   color: ${colors.offwhite};
   line-height: 1.3;

@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Logo from "./Logo";
 import { colors, faint, fonts, media } from "../theme";
 import { useScrolled } from "../hooks/useUI";
+import { CONTACT } from "../data/contact";
 
 const LINKS = [
   { label: "Work", to: "/work" },
@@ -153,7 +154,7 @@ const SheetItem = styled(NavLink)`
   display: block;
   padding: 1.15rem 0;
   border-bottom: 0.5px solid ${faint(0.08)};
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.9rem;
   font-weight: 300;
   color: ${colors.offwhite};
@@ -172,6 +173,11 @@ const SheetFooter = styled.div`
   font-size: 0.8rem;
   color: ${faint(0.4)};
   font-weight: 200;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 export default function Nav() {
@@ -235,8 +241,8 @@ export default function Nav() {
         </SheetLinks>
 
         <SheetFooter>
-          <span>+66 63 635 0553</span>
-          <span>Khachapal@gmail.com</span>
+          <a href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}>{CONTACT.phone}</a>
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
         </SheetFooter>
       </Sheet>
     </>

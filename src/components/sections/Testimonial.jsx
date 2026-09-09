@@ -39,10 +39,10 @@ const Content = styled.div`
 `;
 
 const Quote = styled.blockquote`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.45;
   color: ${colors.offwhite};
   max-width: 780px;
@@ -65,7 +65,7 @@ const Avatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1rem;
   color: ${colors.gold};
 `;

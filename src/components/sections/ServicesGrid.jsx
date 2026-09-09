@@ -90,7 +90,7 @@ const Icon = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.3rem;
   color: ${colors.offwhite};
   margin-bottom: 0.75rem;

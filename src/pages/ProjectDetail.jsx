@@ -49,7 +49,7 @@ const HeroContent = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(2.8rem, 5vw, 4.8rem);
   font-weight: 300;
   line-height: 1.08;
@@ -99,7 +99,7 @@ const FactValue = styled.div`
 `;
 
 const Description = styled.p`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(1.2rem, 1.8vw, 1.6rem);
   font-weight: 300;
   line-height: 1.7;
@@ -223,7 +223,7 @@ const MoreCat = styled.div`
 `;
 
 const MoreName = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.05rem;
   color: ${colors.offwhite};
 `;

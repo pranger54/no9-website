@@ -14,9 +14,27 @@ export const colors = {
 /* rgba(offwhite, opacity) helper — used everywhere for muted text/borders */
 export const faint = (opacity) => `rgba(240, 237, 230, ${opacity})`;
 
+/* ── Typeface ──
+   One sans-serif family across the whole site. No italics anywhere —
+   emphasis is expressed with weight instead (see GlobalStyles.js).
+   Available weights: 200 300 400 500 600 700 (loaded in index.html). */
 export const fonts = {
-  serif: "'Playfair Display', serif",
   sans: "'Outfit', sans-serif",
+  /* Kept as an alias so any older code that still says fonts.serif
+     renders in the same sans family rather than breaking. */
+  get serif() {
+    return this.sans;
+  },
+};
+
+/* Weight scale — use these instead of hard-coding numbers */
+export const weights = {
+  extraLight: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semiBold: 600,
+  bold: 700,
 };
 
 /* ── Responsive breakpoints ──
@@ -93,9 +111,9 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: fonts.sans,
-    h1: { fontFamily: fonts.serif, fontWeight: 300, letterSpacing: "-0.01em" },
-    h2: { fontFamily: fonts.serif, fontWeight: 300, lineHeight: 1.15 },
-    h3: { fontFamily: fonts.serif, fontWeight: 400 },
+    h1: { fontFamily: fonts.sans, fontWeight: 300, letterSpacing: "-0.01em" },
+    h2: { fontFamily: fonts.sans, fontWeight: 300, lineHeight: 1.15 },
+    h3: { fontFamily: fonts.sans, fontWeight: 400 },
     body1: { fontWeight: 200, lineHeight: 1.85 },
     body2: { fontWeight: 200, lineHeight: 1.75 },
     button: { fontFamily: fonts.sans, letterSpacing: "0.16em", fontWeight: 500 },

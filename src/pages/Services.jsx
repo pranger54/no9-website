@@ -13,7 +13,7 @@ export default function Services() {
         title={<>Full-spectrum design, <em>from ground to sky</em></>}
       />
       <ServicesGrid />
-      <Marquee />
+      {/* <Marquee /> */}
       <CTA />
     </>
   );

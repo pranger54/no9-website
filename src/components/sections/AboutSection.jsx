@@ -136,7 +136,7 @@ const Pillar = styled.div`
 `;
 
 const PillarNumber = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 0.9rem;
   color: ${colors.gold};
   font-weight: 300;
@@ -145,7 +145,7 @@ const PillarNumber = styled.div`
 `;
 
 const PillarTitle = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.05rem;
   color: ${colors.offwhite};
   margin-bottom: 0.25rem;

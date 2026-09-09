@@ -41,7 +41,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(2.6rem, 4.5vw, 4.2rem);
   font-weight: 300;
   line-height: 1.1;
@@ -49,7 +49,7 @@ const Title = styled.h1`
   letter-spacing: -0.01em;
 
   em {
-    font-style: italic;
+    font-style: normal;
   }
 
   ${media.mobile} {

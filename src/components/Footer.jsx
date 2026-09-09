@@ -5,8 +5,7 @@ import { colors, faint, media, pagePadding } from "../theme";
 
 const COLUMNS = [
   { title: "Work", links: [["Residential", "/work"], ["Commercial", "/work"], ["Cultural", "/work"], ["Hospitality", "/work"], ["Landscape", "/work"]] },
-  { title: "Studio", links: [["About", "/studio"], ["Team", "/studio"], ["Process", "/studio"], ["Awards", "/studio"], ["Press", "/studio"]] },
-  { title: "Connect", links: [["New Projects", "/contact"], ["Media", "/contact"], ["Careers", "/contact"], ["Instagram", "/contact"], ["LinkedIn", "/contact"]] },
+  { title: "Studio", links: [["About", "/studio"]]},
 ];
 
 const Wrap = styled.footer`

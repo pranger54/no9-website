@@ -40,7 +40,7 @@ const Award = styled.div`
 `;
 
 const Org = styled.div`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: 1.05rem;
   color: ${colors.offwhite};
 `;

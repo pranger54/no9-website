@@ -109,7 +109,7 @@ const CategoryHead = styled.div`
 `;
 
 const CategoryName = styled.h2`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(1.6rem, 2.6vw, 2.3rem);
   font-weight: 300;
   color: ${colors.offwhite};

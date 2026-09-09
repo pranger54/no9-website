@@ -48,14 +48,14 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(2.2rem, 3.8vw, 3.5rem);
   font-weight: 300;
   line-height: 1.12;
   color: ${colors.offwhite};
 
   em {
-    font-style: italic;
+    font-style: normal;
     color: ${colors.gold};
   }
 

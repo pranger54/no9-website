@@ -44,14 +44,14 @@ export const Label = ({ children, center }) => (
 
 /* Big serif section heading */
 export const SectionTitle = styled.h2`
-  font-family: ${fonts.serif};
+  font-family: ${fonts.sans};
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 300;
   line-height: 1.15;
   color: ${colors.offwhite};
 
   em {
-    font-style: italic;
+    font-style: normal;
   }
 `;
 
@@ -63,11 +63,31 @@ export const Muted = styled.p`
   font-weight: 200;
 `;
 
-/* Scrolls to top whenever the route changes */
+/* Scrolls to the top on every route change — unless the link carried a
+   #hash (e.g. /work#residential), in which case it scrolls to that
+   section instead. */
 export function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo({ top: 0 });
+      return;
+    }
+
+    /* Wait a frame so the target section exists after the route renders */
+    const id = hash.slice(1);
+    const frame = requestAnimationFrame(() => {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0 });
+      }
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash]);
+
   return null;
 }

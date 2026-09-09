@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors, media } from "../theme";
+import { colors, fonts, media, weights } from "../theme";
 
 const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -17,10 +17,36 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${colors.ink};
     color: ${colors.offwhite};
+    font-family: ${fonts.sans};
     overflow-x: hidden;
     width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── Typography rules ──────────────────────────────────────────────
+     One sans-serif family everywhere, and no slanted text anywhere.
+     Emphasis is carried by WEIGHT instead of italics.                */
+
+  /* Everything inherits the single family — including form controls,
+     which browsers otherwise render in their own default font */
+  input, textarea, select, button {
+    font-family: inherit;
+  }
+
+  /* Kill italics site-wide, whatever produces them */
+  em, i, cite, address, dfn, var, blockquote, q {
+    font-style: normal;
+  }
+
+  /* <em> now means "emphasised" — shown a step heavier, not slanted */
+  em {
+    font-weight: ${weights.medium};
+  }
+
+  /* Bold still works and is properly bold */
+  strong, b {
+    font-weight: ${weights.bold};
   }
 
   /* Nothing may push the page wider than the screen */

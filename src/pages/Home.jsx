@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Marquee />
+      {/* <Marquee /> */}
       <ProjectsGrid />
       <AboutSection />
       {/* <ServicesGrid /> */}
